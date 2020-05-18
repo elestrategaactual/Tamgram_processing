@@ -1,5 +1,5 @@
 
-public class Figura{
+abstract class Figura{
 //atributos
 color c;
 float [] prs = {0,0,0,0};
@@ -18,13 +18,18 @@ Figura(color tempC, float tempXpos, float tempYpos, float tempr, float temps) {
     translate(prs[0],prs[1]);
     scale(prs[3]);
     rotate(radians(prs[2]));
-    rectMode(CENTER);
-    rect(0,0,20,10);
+    drawFigura();
    pop();
   }
+   abstract void drawFigura();
+
   void move(float x,float y ,float r) {
     prs[0] = prs[0]+x;
     prs[1] = prs[1]+y;
     prs[2] = prs[2]+r;
   }
+   color getColor() {
+    return c ;
+  }
+  
 }
