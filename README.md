@@ -1,1 +1,1 @@
-# Tamgram on prosesing
+# Tamgram on processing
